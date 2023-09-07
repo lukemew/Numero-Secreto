@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Secreto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Número Secreto</h1>
+    <h3>Escolha um número entre <span id="menor-numero">0</span> à <span id="maior-numero">100</span></h3>
+
+    <div id="chute" class="mensagem">
+        <div>Você disse:</div>
+        <span class="box">20</span>
+        <div>O número secreto é maior</div>
+    </div>
+
+    <script src="./numeroAleatorio.js"></script>
+</body>
+</html>
