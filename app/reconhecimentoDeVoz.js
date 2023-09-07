@@ -4,8 +4,8 @@ const reconhecimento = new SpeechRecognition();
 reconhecimento.lang= 'pt-br';
 reconhecimento.start();
 
-reconhecimento.addEventListener('result', onSpeak)
+reconhecimento.addEventListener('results', onSpeak)
 
 function onSpeak(e){
-    console.log(e)
+    window.alert(e.results[0][0].transcript)
 }
