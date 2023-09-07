@@ -7,7 +7,6 @@ reconhecimento.start();
 reconhecimento.addEventListener('result', onSpeak)
 
 var caixa = document.querySelector('.box');
-window.alert("Teste")
 
 function onSpeak(e){
     caixa.innerHTML = (e.results[0][0].transcript)
