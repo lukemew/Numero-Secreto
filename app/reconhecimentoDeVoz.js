@@ -9,5 +9,5 @@ reconhecimento.addEventListener('result', onSpeak)
 var caixa = document.querySelector('.box');
 
 function onSpeak(e){
-    caixa.innerHTML = (e.results[0][0].transcript)
+    caixa.innerHTML = parseInt(e.results[0][0].transcript)
 }
