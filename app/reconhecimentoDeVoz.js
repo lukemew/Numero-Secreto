@@ -19,3 +19,7 @@ function exibeNumeroDoChute(chute){
         <div>Você disse:</div>
         <span class= 'box'>${chute}</span>`
 }
+
+reconhecimento.addEventListener('end', () => 
+    reconhecimento.start()
+)
