@@ -15,15 +15,17 @@ if (numeroForMaiorOuMenor(numero)){
 if (numero === numeroSecreto) {
     document.body.innerHTML = `
     <h1>Você acertou!</h1>
-    <h3>O número secreto era ${numeroSecreto}</h3>`
+    <h3>O número secreto era ${numeroSecreto}</h3>
+    
+    <button id='jogar-novamente' class='btn-jogar'>Jogar Novamente</button>`
 }
 
 if (numero > numeroSecreto){
-    elementoChute.innerHTML += `Quase lá, o número secreto é menor`
+    elementoChute.innerHTML += `<div>Quase lá, o número secreto é menor</div>`
 }
 
 if (numero < numeroSecreto){
-    elementoChute.innerHTML += `O número secreto é maior`
+    elementoChute.innerHTML += `<div>O número secreto é maior</div>`
 }
 
 }

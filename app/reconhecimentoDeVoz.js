@@ -23,3 +23,9 @@ function exibeNumeroDoChute(chute){
 reconhecimento.addEventListener('end', () => 
     reconhecimento.start()
 )
+
+document.body.addEventListener('click', e => {
+    if(e.target.id == 'jogar-novamente'){
+        window.location.reload()
+    }
+})
