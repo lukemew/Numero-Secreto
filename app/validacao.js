@@ -5,14 +5,10 @@ function verificaSeOChutePossuiValorValido(chute){
 if(fimDeJogo(numero)){
     document.body.innerHTML = '<h1>Its Over!</h1>'
     reconhecimento.end()
-}    
-
-if (numeroForInvalido(numero)){
+} else if (numeroForInvalido(numero)){
     elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
     return
-}
-
-if (numeroForMaiorOuMenor(numero)){
+} else if (numeroForMaiorOuMenor(numero)){
     elementoChute.innerHTML += `<div>Valor Inválido: o número precisa estar entre ${menorValor} & ${maiorValor}</div>`; 
     return
 }
@@ -46,5 +42,5 @@ function numeroForMaiorOuMenor(numero){
 }
 
 function fimDeJogo(numero){
-    return numero == 'game over' || numero == 'fim'
+    return numero == 'game over' || numero == 'final'
 }
