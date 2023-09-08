@@ -2,12 +2,14 @@
 function verificaSeOChutePossuiValorValido(chute){
     const numero = +chute
 
-if(fimDeJogo(numero)){
-    document.body.innerHTML = '<h1>Its Over!</h1>'
-    reconhecimento.end()
-} else if (numeroForInvalido(numero)){
+ if (numeroForInvalido(numero)){
+    if (chute.toUpperCase === "GAME OVER") {
+        document.body.innerHTML = 'Its Over!'
+    } else {
     elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
     return
+    }
+
 } else if (numeroForMaiorOuMenor(numero)){
     elementoChute.innerHTML += `<div>Valor Inválido: o número precisa estar entre ${menorValor} & ${maiorValor}</div>`; 
     return
@@ -41,6 +43,3 @@ function numeroForMaiorOuMenor(numero){
     return numero < menorValor || numero > maiorValor;
 }
 
-function fimDeJogo(numero){
-    return numero == 'game over' || numero == 'final'
-}
