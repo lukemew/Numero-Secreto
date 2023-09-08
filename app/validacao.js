@@ -2,6 +2,11 @@
 function verificaSeOChutePossuiValorValido(chute){
     const numero = +chute
 
+if(fimDeJogo(numero)){
+    document.body.innerHTML = '<h1>Its Over!</h1>'
+    reconhecimento.end()
+}    
+
 if (numeroForInvalido(numero)){
     elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
     return
@@ -28,6 +33,8 @@ if (numero < numeroSecreto){
     elementoChute.innerHTML += `<div>O número secreto é maior</div>`
 }
 
+
+
 }
 
 function numeroForInvalido(numero){
@@ -38,3 +45,6 @@ function numeroForMaiorOuMenor(numero){
     return numero < menorValor || numero > maiorValor;
 }
 
+function fimDeJogo(numero){
+    return numero == 'game over' || numero == 'fim'
+}
