@@ -8,8 +8,22 @@ if (numeroForInvalido(numero)){
 }
 
 if (numeroForMaiorOuMenor(numero)){
-    elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
+    elementoChute.innerHTML += `<div>Valor Inválido: o número precisa estar entre ${menorValor} & ${maiorValor}</div>`; 
 
+}
+
+if (numero === numeroSecreto) {
+    document.body.innerHTML = `
+    <h1>Você acertou!</h1>
+    <h3>O número secreto era ${numeroSecreto}</h3>`
+}
+
+if (numero > numeroSecreto){
+    elementoChute.innerHTML += `Quase lá, o número secreto é menor`
+}
+
+if (numero < numeroSecreto){
+    elementoChute.innerHTML += `O número secreto é maior`
 }
 
 }
