@@ -1,16 +1,15 @@
-var mensagem = document.querySelector('#mensagem')
 
 function verificaSeOChutePossuiValorValido(chute){
     const numero = +chute
 
 if (numeroForInvalido(numero)){
+    elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
     
-    mensagem.innerHTML = "numero invalido"
 }
 
 if (numeroForMaiorOuMenor(numero)){
-    
-    mensagem.innerHTML = "numero invalido"
+    elementoChute.innerHTML += '<div>Valor Inválido</div>'; 
+
 }
 
 }
