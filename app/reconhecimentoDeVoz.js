@@ -11,6 +11,7 @@ reconhecimento.addEventListener('result', onSpeak);
 function onSpeak(e){
     chute = (e.results[0][0].transcript);
     exibeNumeroDoChute(chute);
+    verificaSeOChutePossuiValorValido(chute);
 }
 
 function exibeNumeroDoChute(chute){
